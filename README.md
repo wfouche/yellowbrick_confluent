@@ -1,6 +1,6 @@
 # Yellowbrick Test
 
-This project initalizes Kafka, sends 3million messages into kafka via the datagen connector and writes them into a postgres JDBC source
+This project initalizes Kafka, writes 3million messages into a Kafka topic via the datagen connector and then sinks those messages into a postgres JDBC source
 
 ## Steps
 
