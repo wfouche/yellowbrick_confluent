@@ -1,0 +1,19 @@
+{
+    "name": "test-yellowbrick-sink",
+    "config": {
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "topics": "orders",
+        "connection.url": "jdbc:postgresql://postgres/orders",
+        "connection.user": "admin",
+        "connection.password": "Confluent123",
+        "insert.mode": "upsert",
+        "pk.mode": "record_key",
+        "pk.fields": "ORDERID",
+        "auto.create": true,
+        "auto.evolve": true,
+        "delete.enabled": true,
+        "transforms": "Cast",
+        "transforms.Cast.type": "org.apache.kafka.connect.transforms.Cast$Key",
+        "transforms.Cast.spec": "int32"
+    }
+}
