@@ -5,7 +5,7 @@
         "kafka.topic": "orders",
         "schema.filename": "/schemas/orders.json",
         "schema.keyfield": "orderId",
-        "max.interval": 5,
+        "max.interval": -1,
         "iterations":3000000
     }
 }
