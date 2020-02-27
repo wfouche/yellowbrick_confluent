@@ -10,11 +10,11 @@ docker-compose up -d
 ```
 2. Create the initial topics & start the datagen connector
 ```
-scripts/start.sh
+scripts/create-kafka-records.sh
 ```
 
 3. Start the JDBC sink for postgres, it will track the records and report records per second
 ```
-scripts/start-sink-and-time.sh
+scripts/sink-and-measure.sh
 ```
 

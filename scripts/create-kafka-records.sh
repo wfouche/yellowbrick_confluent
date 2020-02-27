@@ -8,7 +8,7 @@ ${DIR}/connectors/submit-connector.sh ${DIR}/connectors/orders-datagen.json
 # Wait for datagen to write records
 MAX_WAIT=120
 CUR_WAIT=0
-echo "\nWaiting up to $MAX_WAIT seconds for records to be written"
+echo -e "\nWaiting up to $MAX_WAIT seconds for records to be written"
 while [[ ! $(docker-compose logs kafka-connect) =~ "Stopping connector: generated the configured" ]]; do
   sleep 3
   CUR_WAIT=$(( CUR_WAIT+3 ))

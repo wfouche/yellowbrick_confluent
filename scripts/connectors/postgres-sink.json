@@ -6,7 +6,7 @@
         "connection.url": "jdbc:postgresql://postgres/orders",
         "connection.user": "admin",
         "connection.password": "Confluent123",
-        "batch.size": "10000",
+        "batch.size": "3000",
         "insert.mode": "upsert",
         "pk.mode": "record_key",
         "pk.fields": "ORDERID",
@@ -15,6 +15,7 @@
         "delete.enabled": true,
         "transforms": "Cast",
         "transforms.Cast.type": "org.apache.kafka.connect.transforms.Cast$Key",
-        "transforms.Cast.spec": "int32"
+        "transforms.Cast.spec": "int32",
+        "tasks.max": 10
     }
 }
