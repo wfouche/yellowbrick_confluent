@@ -1,6 +1,6 @@
 # Yellowbrick Test
 
-This project initalizes Kafka, writes 3million messages into a Kafka topic via the datagen connector and then sinks those messages into a postgres JDBC source
+This project initalizes Kafka, writes 3million messages into a Kafka topic via the datagen connector and then sinks those messages into a postgres JDBC sink
 
 ## Steps
 
@@ -13,8 +13,8 @@ docker-compose up -d
 scripts/start.sh
 ```
 
-3. Start the JDBC sink for postgres
+3. Start the JDBC sink for postgres, it will track the records and report records per second
 ```
-scripts/connectors/submit-connector.sh scripts/connectors/postgres-sink.json
+scripts/start-sink-and-time.sh
 ```
 

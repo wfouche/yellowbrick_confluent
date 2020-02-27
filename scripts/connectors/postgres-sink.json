@@ -6,6 +6,7 @@
         "connection.url": "jdbc:postgresql://postgres/orders",
         "connection.user": "admin",
         "connection.password": "Confluent123",
+        "batch.size": "10000",
         "insert.mode": "upsert",
         "pk.mode": "record_key",
         "pk.fields": "ORDERID",
