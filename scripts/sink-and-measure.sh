@@ -3,6 +3,12 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RECORD_COUNT=3000000
 
+echo "Dropping table if exists..."
+docker exec postgres psql -c 'DROP TABLE IF EXISTS orders;'
+
+echo "Creating table..."
+docker exec postgres psql -c 'CREATE TABLE orders  (ORDERID int PRIMARY KEY, SIDE varchar(10), QUANTITY int, SYMBOL varchar(20), ACCOUNT varchar(20), USERID varchar(20));'
+
 echo "Submitting postgres sink..."
 ${DIR}/connectors/submit-connector.sh ${DIR}/connectors/postgres-sink.json
 START=$(date +%s)

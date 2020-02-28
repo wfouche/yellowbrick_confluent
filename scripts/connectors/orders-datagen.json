@@ -4,7 +4,7 @@
         "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
         "kafka.topic": "orders",
         "schema.filename": "/schemas/orders.json",
-        "schema.keyfield": "orderId",
+        "schema.keyfield": "orderid",
         "max.interval": -1,
         "iterations":3000000
     }

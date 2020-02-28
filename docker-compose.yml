@@ -50,9 +50,6 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: "Confluent123"
-      POSTGRES_USER: "admin"
-      POSTGRES_DB: "orders"
       PGHOST: ${PGHOST}
       PGPORT: ${PGPORT}
       PGDATABASE: ${PGDATABASE}
