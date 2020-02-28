@@ -5,7 +5,7 @@
     "type": "record",
     "fields": [
         {
-            "name": "orderId",
+            "name": "orderid",
             "doc": "The id of the order",
             "type": {
                 "type": "int",
