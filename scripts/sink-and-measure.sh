@@ -11,7 +11,7 @@ echo
 echo "Waiting for data to be written to Postgres"
 while true;
 do
-  COUNT=$(docker exec postgres psql -U admin -d orders -t -A -c 'select count(*) from orders;' 2> /dev/null)
+  COUNT=$(docker exec postgres psql -t -A -c 'select count(*) from orders;' 2> /dev/null)
   if [[ ${COUNT} -eq ${RECORD_COUNT} ]]; then
     END=$(date +%s)
     break
